@@ -1,0 +1,34 @@
+{
+  "bot_id": "mission_825_montenegro",
+  "title": "Montenegro banks",
+  "description": "A list of banks referenced in the Montenegro central bank",
+  "language": "python",
+  "data_type": "primary data",
+  "identifying_fields": [
+    "licence_number"
+  ],
+  "company_fields": {
+    "name": "company"
+  },
+  "files": [
+    "scraper.py",
+    "scrape_banks.py",
+    "scrape_imf.py",
+    "scrape_revoked.py",
+    "scrape_foreign.py",
+    "scraper_utils.py",
+    "licence_transformer.py"
+  ],
+  "transformers": [{
+    "file":  "licence_transformer.py",
+    "data_type": "simple-licence",
+    "identifying_fields": ["licence_number"]
+  }],
+  "frequency": "monthly",
+  "publisher": {
+    "name": "Centralna banka Crne Gore",
+    "url": "http://www.cb-cg.org/",
+    "terms": "http://www.cb-cg.org/index.php?mn1=publikacije&mn2=sloboda_informisanja",
+    "terms_url": "http://www.cb-cg.org/index.php?mn1=publikacije&mn2=sloboda_informisanja"
+  }
+}
