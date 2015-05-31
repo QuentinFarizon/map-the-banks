@@ -23,6 +23,7 @@ def scrape_imf():
         raw_data['company_name'] = imf_root.find_all("td", "kursna_list_naslov")[0].text
         raw_data['licence_number'] = extract_licence_number(imf.next_sibling)
         raw_data['start_date'] = extract_start_date(imf.next_sibling)
+        raw_data['jurisdiction_classification'] = "Micro finance institution"
 
         print json.dumps(raw_data, unicode)
 

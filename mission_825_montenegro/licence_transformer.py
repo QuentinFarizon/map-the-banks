@@ -14,7 +14,7 @@ while True:
         "start_date": raw_record['start_date'],
         "licence_number": raw_record['licence_number'],
         "status": raw_record.get("status", "Current"),
-        "jurisdiction_classification": 'Bank',
+        "jurisdiction_classification": raw_record.get("jurisdiction_classification", "Bank"),
         "category": 'Financial',
         "confidence": 'HIGH',
         "company_jurisdiction": "Montenegro",
